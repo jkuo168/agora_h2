@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Agora Certificate Day-2-HW</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <link href="preconnect" href="https://fonts.gstatic.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"/>
+    </head>
+    <body>
+        <input id="number-1"></input>
+        <input id="number-2"></input>
+        <button onClick="calculate('add')">Add</button>
+        <button onClick="calculate('subtract')">Subtract</button>
+        <button onClick="calculate('multiply')">Multiply</button>
+        <button onClick="calculate('divide')">Divide</button>
+        <input id="answer"></input>
+    </body>
+    <script>
+        function calculate(operation) {
+            let num1 = parseInt(document.getElementById('number-1').value)
+            let num2 = parseInt(document.getElementById('number-2').value)
+            let answer = 0
+
+            if (operation === 'add') {
+                answer = num1 + num2
+            } else if (operation === 'subtract') {
+                answer = num1 - num2
+            } else if (operation === 'multiply') {
+                answer = num1 * num2
+            } else {
+                answer = num1 / num2
+            }
+            
+            document.getElementById('answer').value = answer
+        }
+    </script>
+</html>
